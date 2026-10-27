@@ -5,57 +5,87 @@ export const profile = {
     subtitle: "Certified Project Management Professional (PMP®) & Project Management Trainer",
     bio: "Experienced <span class='text-pmi-blue dark:text-blue-400 font-bold'>Project Management professional</span> with a background in delivering high-impact VET training and leading cross-functional software teams. Specialising in <span class='text-pmi-blue dark:text-blue-400 font-bold'>business-driven Agile practices</span>, strategic project delivery, and outcomes-focused coaching.",
     profilePhoto: {
-        url: "https://media.licdn.com/dms/image/v2/D5603AQHkpFjntA0Mxg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712807361458?e=1773273600&v=beta&t=uCFvhR9kS3QeyOJjTXdnzxoSdGo0kX_KPOG0w2MCwDw"
+        url: "/images/profile.webp"
     }
 };
 
 export const careerJourneyTimeline = [
     { year: "2016", label: "Developer", order: 1 },
     { year: "2019", label: "Business Analyst", order: 2 },
-    { year: "2020", label: "ICT Project Manager", order: 3 },
-    { year: "2024", label: "PM Trainer", order: 4 }
+    { year: "2020", label: "Project Manager", order: 3 },
+    { year: "2024", label: "PM Consultant & Trainer", order: 4 }
+];
+
+// The About section: three stages of the journey, each with a photo (public/images).
+export const aboutStages = [
+    {
+        id: "build",
+        stage: "Build",
+        years: "2016 – 2020",
+        title: "Engineer to analyst",
+        text: "Started as a computer engineer and front-end developer, then moved into business analysis at eSewa, turning business needs into digital payment products.",
+        image: "/images/about-build.webp"
+    },
+    {
+        id: "lead",
+        stage: "Lead",
+        years: "2020 – 2023",
+        title: "Leading delivery",
+        text: "Managed software delivery at Leapfrog for US biotech and healthcare clients, coaching cross-functional teams of up to 50 through full Agile cycles.",
+        image: "/images/about-lead.webp"
+    },
+    {
+        id: "teach",
+        stage: "Teach & advise",
+        years: "2024 – now",
+        title: "Consultant and trainer",
+        text: "Now in Perth, designing courses and training the next generation of project leaders at NIT, bringing real delivery experience into the classroom.",
+        image: "/images/about-teach.webp"
+    }
 ];
 
 export const experiences = [
     {
         id: 1,
         company: "National Institute of Technology, Perth",
-        role: "Business & Project Management Trainer",
-        startDate: "2024-04-20",
+        role: "Project Management Consultant",
+        startDate: "2024-04-01",
         endDate: null,
         description: [
-            "Leading strategic agile transformations across the enterprise.",
-            "Optimising delivery pipelines and cross-functional team collaboration."
+            "Course developer and advisor across business and project management qualifications, including the Diploma of Project Management and Advanced Diploma of Program Management.",
+            "Established the Advanced Diploma of Program Management (BSB60720) from inception, from course structure and units to content, and launched it successfully in 2025.",
+            "Train and assess students across the full project and program management competency set, using Agile, the PMBOK Guide and tools such as MS Project, Jira and Miro."
         ],
-        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNHZyih_N7qjvDOR7SoGw1SJUHGsNS6vQ3Eg&s",
+        logo: "/images/logo-nit.webp",
         order: 1,
         color: "#a6ce39"
     },
     {
         id: 2,
-        company: "Leapfrog Technology, Kathmandu, Nepal",
-        role: "ICT Project Manager",
-        startDate: "2020-06-20",
-        endDate: "2023-07-15",
+        company: "Leapfrog Technology, Kathmandu / Seattle (remote)",
+        role: "Associate Project Manager → Project Manager",
+        startDate: "2020-07-01",
+        endDate: "2023-07-31",
         description: [
-            "Train and assess students in project domains (cost, scope, risk) using Agile and PMBOK methodologies.",
-            "Design assessment tools and maintain a hands-on learning environment for industry-standard software like MS Project and Jira."
+            "Led medium-scale software projects end to end with Scrum, Kanban and Scrum of Scrums, coaching cross-functional teams of up to 50 across biotech and healthcare.",
+            "Ran discovery and a 3-week inception with US drug-discovery and healthcare clients, turning specialised requirements into scoped, deliverable plans.",
+            "Delivered the core MVP on schedule, directly supporting the client's go-to-market pitch to pharmaceutical partners."
         ],
-        logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGW2mdMPhlOjA/company-logo_200_200/company-logo_200_200/0/1696567947115/lftechnology_logo?e=2147483647&v=beta&t=qjcDszw5d-LFTJC7z4dnyCz4haXexpw4RkS1-gqm7EI",
+        logo: "/images/logo-leapfrog.webp",
         order: 2,
         color: "#048e43"
     },
     {
         id: 3,
-        company: "eSewa Limited, Kathmandu, Nepal",
+        company: "eSewa Fonepay, Kathmandu, Nepal",
         role: "Business Analyst",
         startDate: "2019-04-01",
-        endDate: "2020-06-20",
+        endDate: "2020-07-01",
         description: [
             "Managed project schedules, budgets, and stakeholder communication.",
             "Delivered key software products on time and within scope."
         ],
-        logo: "https://republicaimg.nagariknewscdn.com/shared/web/uploads/media/esewa_20200118185351.jpg",
+        logo: "/images/logo-esewa.webp",
         order: 3,
         color: "#61bc47"
     },
@@ -64,12 +94,12 @@ export const experiences = [
         company: "Cloudfactory, Kathmandu, Nepal",
         role: "Frontend Developer - Intern",
         startDate: "2016-06-01",
-        endDate: "2018-09-31",
+        endDate: "2018-09-30",
         description: [
             "Contributed to project planning and execution in a fast-paced environment.",
             "Gained foundational experience in project coordination and agile basics."
         ],
-        logo: "https://media.licdn.com/dms/image/v2/D4D0BAQE9yrbRT87Kyw/company-logo_200_200/company-logo_200_200/0/1696484560023/cloudfactory_nepal_logo?e=2147483647&v=beta&t=2oXHqykX8UCsPNyavt8q-X_SZ3pYTUQMk8TGyRfNUxM",
+        logo: "/images/logo-cloudfactory.webp",
         order: 4,
         color: "#2596be"
     }
@@ -154,22 +184,22 @@ export const educations = [
         name: "Project Management",
         institution: "Curtin University",
         location: "Perth, Australia",
-        year: "2022",
+        year: "2024",
         order: 1,
         image: {
-            url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Curtin_University_Crest.jpg/250px-Curtin_University_Crest.jpg"
+            url: "/images/edu-curtin.webp"
         }
     },
     {
         id: 2,
         title: "Master of Business Administration in IT",
         name: "MBA IT",
-        institution: "Tribhuvan University",
+        institution: "School of Management, Tribhuvan University",
         location: "Kathmandu, Nepal",
-        year: "2017",
+        year: "2020",
         order: 2,
         image: {
-            url: "https://portal.tu.edu.np/medias/Tribhuvan_University_logo.svg_2023_10_05_16_11_41.png"
+            url: "/images/edu-tu.webp"
         }
     },
     {
@@ -177,11 +207,11 @@ export const educations = [
         title: "Bachelor of Computer Engineering",
         name: "Computer Engineering",
         institution: "Kathmandu University",
-        location: "Dhulikhel,Nepal",
-        year: "2012",
+        location: "Dhulikhel, Nepal",
+        year: "2016",
         order: 3,
         image: {
-            url: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Kathmandu_University_Logo.svg/250px-Kathmandu_University_Logo.svg.png"
+            url: "/images/edu-ku.webp"
         }
     }
 ];
@@ -197,7 +227,7 @@ export const certifications = [
         description: "Project Management Professional",
         order: 1,
         logo: {
-            url: "https://images.credly.com/images/731e7ef4-9b0c-4d7b-ab65-23cc699c0aa3/blob"
+            url: "/images/cert-pmp.webp"
         }
     },
     {
@@ -206,12 +236,35 @@ export const certifications = [
         role: "Certified Associate Project Manager",
         issuer: "Project Management Institute",
         year: "2025",
-        link: "https://www.credly.com/badges/94a20fb6-0cc4-47a5-9c10-f9541b7a9e65",
-        description: "Certified Associate Project Manager",
+        link: "#",
+        description: "Certified Associate in Project Management",
         order: 2,
         logo: {
-            url: "https://images.credly.com/size/680x680/images/80c95f74-dcf0-43fc-a437-053a598feb05/blob"
+            url: "/images/cert-capm.webp"
         }
+    },
+    {
+        id: 4,
+        name: "Google PM",
+        role: "Google Project Management Certificate",
+        issuer: "Coursera",
+        year: "2025",
+        link: "#",
+        description: "Google Project Management Certificate",
+        order: 3,
+        // No badge image: shown as a monogram tile in its brand colour
+        monogram: { text: "G", color: "#4285F4" }
+    },
+    {
+        id: 5,
+        name: "TAE40122",
+        role: "Certificate IV in Training and Assessment",
+        issuer: "Masters in Education",
+        year: "2024",
+        link: "#",
+        description: "Certificate IV in Training and Assessment",
+        order: 4,
+        monogram: { text: "IV", color: "#6A317F" }
     },
     {
         id: 3,
@@ -221,9 +274,9 @@ export const certifications = [
         year: "2019",
         link: "#",
         description: "Certified Scrum Product Owner",
-        order: 3,
+        order: 5,
         logo: {
-            url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoH1_3M84_iC7rOVk21LMjYDySTdg36ejWKw&s"
+            url: "/images/cert-cspo.webp"
         }
     }
 ];

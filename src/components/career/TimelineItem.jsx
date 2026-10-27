@@ -7,12 +7,12 @@ export const TimelineItem = ({
     descPoints
 }) => {
     return (
-        <div className="interactive flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-border bg-card p-6 shadow-sm group hover:-translate-y-1">
-            <div className="relative mb-6">
+        <div className="interactive flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm group hover:-translate-y-1">
+            <div className="relative mb-4">
                 <div className="flex items-start gap-4">
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-muted shadow-sm">
+                    <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-white shadow-sm">
                         {exp.logo ? (
-                            <img src={exp.logo} alt={exp.company} className="w-full h-full object-cover" />
+                            <img src={exp.logo} alt={exp.company} loading="lazy" width="96" height="96" className="w-full h-full object-cover" />
                         ) : (
                             <div className="flex h-full w-full items-center justify-center bg-foreground text-background">
                                 <span className="text-[8px] font-bold">{exp.company?.substring(0, 2).toUpperCase()}</span>
@@ -30,11 +30,11 @@ export const TimelineItem = ({
                         </h5>
 
                         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                            <span className="rounded-md bg-[#005FB9]/10 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[#005FB9] dark:text-blue-400">
+                            <span className="rounded-md bg-brand/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-brand dark:text-blue-400">
                                 {displayDate}
                             </span>
                             {duration && (
-                                <span className="rounded-md bg-muted px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+                                <span className="rounded-md bg-muted px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                                     {duration}
                                 </span>
                             )}
@@ -45,9 +45,9 @@ export const TimelineItem = ({
 
             <ul className="space-y-2 relative z-10 flex-grow">
                 {descPoints.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 font-medium leading-relaxed text-muted-foreground">
-                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-border" />
-                        <span className="text-xs">{point}</span>
+                    <li key={i} className="flex items-start gap-2.5 leading-relaxed text-muted-foreground">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand/60" />
+                        <span className="text-sm">{point}</span>
                     </li>
                 ))}
             </ul>
