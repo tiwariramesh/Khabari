@@ -1,6 +1,9 @@
+import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import PrivacyPolicy from './pages/PrivacyPolicy'
+
+// Loaded only when visited: it brings the Markdown renderer, which the home page doesn't need.
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 import {
   profile,
   experiences,
@@ -32,11 +35,12 @@ function App() {
         />
         <Route
           path="/privacy-policy"
-          element={<PrivacyPolicy
-            profile={profile}
-            socialLinks={socialLinks}
-            services={services}
-          />}
+          element={<Suspense fallback={null}>
+            <PrivacyPolicy
+              profile={profile}
+              socialLinks={socialLinks}
+            />
+          </Suspense>}
         />
       </Routes>
     </BrowserRouter>

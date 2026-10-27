@@ -4,7 +4,7 @@ export const TimelineScale = ({ steps }) => {
     if (!steps || steps.length === 0) return null;
 
     return (
-        <div className="hidden lg:block relative mb-32 mt-12 px-6">
+        <div className="hidden lg:block relative mb-20 mt-14 px-6">
             <div className="absolute left-6 right-6 top-[8px] h-[4px] rounded-full bg-border/60" />
             <div className="absolute left-6 right-6 top-[8px] h-[4px] rounded-full bg-gradient-to-r from-[#005FB9] via-[#3F37C9] to-[#60A5FA] opacity-90" />
 

@@ -3,6 +3,7 @@ import { useTimelineData } from '@/hooks/useTimelineData';
 import { careerJourneyTimeline } from '@/data/mockData';
 import { TimelineScale } from './career/TimelineScale';
 import { TimelineItem } from './career/TimelineItem';
+import SectionHeader from './SectionHeader';
 
 const CareerJourney = ({ experiences = [] }) => {
     const { sortedExperiences, renderedSteps } = useTimelineData(experiences, careerJourneyTimeline);
@@ -10,19 +11,16 @@ const CareerJourney = ({ experiences = [] }) => {
     return (
         <section id="experience" className="section-shell overflow-hidden">
             <div className="container-shell">
-                <div className="mb-14 text-center md:text-left">
-                    <h2 className="text-4xl font-black text-pmi-navy dark:text-white tracking-tight mb-6">
-                        Career <span className="text-pmi-blue dark:text-blue-400">Journey.</span>
-                    </h2>
-                    <p className="section-subheading mx-auto md:mx-0">
-                        Progressive impact across global organisations and transformative initiatives
-                    </p>
-                </div>
+                <SectionHeader
+                    title="Career"
+                    highlight="Journey."
+                    subtitle="Progressive impact across global organisations and transformative initiatives."
+                />
 
                 <TimelineScale steps={renderedSteps} />
 
-                <div className="relative mt-8">
-                    <div className="grid md:grid-cols-2 gap-8">
+                <div className="relative">
+                    <div className="grid md:grid-cols-2 gap-5">
                         {sortedExperiences.map((exp, index) => {
                             const descPoints = typeof exp.description === 'string'
                                 ? exp.description.split('\n').map(s => s.replace(/^-\s*/, '').trim()).filter(s => s)

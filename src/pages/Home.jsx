@@ -21,7 +21,6 @@ const Home = ({ profile, experiences, services, socialLinks, skills, educations,
 
             <main className="relative z-10">
                 <Hero profile={profile} />
-                <div className="mx-auto w-1/2 border-t border-border/70" aria-hidden="true" />
                 <AboutMe />
                 <ResumeSection />
                 <Competencies skills={skills} />
@@ -35,7 +34,6 @@ const Home = ({ profile, experiences, services, socialLinks, skills, educations,
                     firstName={profile?.firstName}
                     lastName={profile?.lastName}
                     socialLinks={socialLinks}
-                    services={services}
                 />
             </div>
             <ScrollToTop />
