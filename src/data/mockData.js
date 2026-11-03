@@ -3,9 +3,9 @@ export const profile = {
     lastName: "Tiwari.",
     title: "Agile Project Manager",
     subtitle: "Certified Project Management Professional (PMP®) & Project Management Trainer",
-    bio: "Experienced <span class='text-pmi-blue dark:text-blue-400 font-bold'>Project Management professional</span> with a background in delivering high-impact VET training and leading cross-functional software teams. Specialising in <span class='text-pmi-blue dark:text-blue-400 font-bold'>business-driven Agile practices</span>, strategic project delivery, and outcomes-focused coaching.",
+    bio: "I help teams move from uncertainty to delivery through practical project leadership, clear communication, and training grounded in real software work.",
     profilePhoto: {
-        url: "/images/profile.webp"
+        url: "/images/profile-cutout.png"
     }
 };
 
@@ -92,7 +92,7 @@ export const experiences = [
     {
         id: 4,
         company: "Cloudfactory, Kathmandu, Nepal",
-        role: "Frontend Developer - Intern",
+        role: "Frontend Developer",
         startDate: "2016-06-01",
         endDate: "2018-09-30",
         description: [
@@ -302,11 +302,20 @@ export const socialLinks = [
     },
     {
         id: 3,
-        platform: "X",
-        url: "https://twitter.com/ramesgunner",
+        platform: "GitHub",
+        url: "https://github.com/tiwariramesh",
         order: 3,
-        icon: "X",
-        label: "Follow on X",
+        icon: "Github",
+        label: "View GitHub profile",
+        showInContact: true
+    },
+    {
+        id: 4,
+        platform: "Instagram",
+        url: "https://www.instagram.com/framebygrain_/",
+        order: 4,
+        icon: "Instagram",
+        label: "View Frame by Grain",
         showInContact: true
     }
 ];
